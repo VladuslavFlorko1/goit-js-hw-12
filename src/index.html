@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="uk">
 
 <head>
@@ -10,7 +10,8 @@
 
 <body>
   <header class="header">
-    <form class="form search-form" id="search-form" autocomplete="off">
+
+    <form class="form" autocomplete="off">
       <input type="text" name="search" placeholder="Search images..." required />
       <button type="submit">Search</button>
     </form>
@@ -24,12 +25,16 @@
         Load more
       </button>
 
-      <span class="loader is-hidden" id="loader" aria-hidden="true">
-        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+
+      <span class="loader is-hidden" id="loader">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
       </span>
     </div>
   </main>
 
+ 
   <script type="module" src="./main.js"></script>
 </body>
 

@@ -17,12 +17,12 @@
 @import url('./back-link.css');
 @import url('./footer.css');
 :root {
-  --bg-color: #ffffff;
-  --card-bg: #ffffff;
-  --text-color: #2e2e2e;
+  --accent-color: #4e75ff;
+  --accent-hover: #3d5ae8;
   --border-color: #e5e5e5;
+  --text-color: #2e2e2e;
+  --background-color: #ffffff;
   --shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  --accent: #4e75ff;
 }
 
 * {
@@ -32,64 +32,64 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  background-color: var(--bg-color);
+  background-color: var(--background-color);
   color: var(--text-color);
 }
 
-/* ---------- HEADER + FORM ---------- */
+/* ======== HEADER / SEARCH FORM ======== */
 .header {
-  padding: 20px 0;
-  border-bottom: 1px solid var(--border-color);
   background-color: #f8f8f8;
+  border-bottom: 1px solid var(--border-color);
+  padding: 20px 0;
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 10;
 }
 
-.search-form {
+.form {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 8px;
 }
 
-.search-form input {
+.form input {
   width: 300px;
   padding: 10px 12px;
-  border-radius: 4px;
   border: 1px solid var(--border-color);
+  border-radius: 4px;
   font-size: 14px;
 }
 
-.search-form button {
+.form button {
   padding: 10px 18px;
   border: none;
   border-radius: 4px;
-  background-color: var(--accent);
-  color: white;
+  background-color: var(--accent-color);
+  color: #fff;
   font-weight: 500;
   cursor: pointer;
   text-transform: capitalize;
   transition: background-color 0.2s ease;
 }
 
-.search-form button:hover {
-  background-color: #3d5ae8;
+.form button:hover {
+  background-color: var(--accent-hover);
 }
 
-/* ---------- GALLERY ---------- */
+/* ======== GALLERY ======== */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 24px;
   padding: 24px;
-  list-style: none;
   margin: 0 auto;
+  list-style: none;
   max-width: 1200px;
 }
 
 .photo-card {
-  background-color: var(--card-bg);
+  background-color: var(--background-color);
   border-radius: 4px;
   box-shadow: var(--shadow);
   overflow: hidden;
@@ -107,14 +107,13 @@ body {
   object-fit: cover;
 }
 
-/* ---------- INFO BLOCK ---------- */
 .info {
   display: flex;
   justify-content: space-around;
   padding: 10px 0;
   border-top: 1px solid var(--border-color);
-  font-size: 12px;
   background-color: #fafafa;
+  font-size: 12px;
 }
 
 .info-item {
@@ -128,7 +127,7 @@ body {
   margin-bottom: 4px;
 }
 
-/* ---------- LOAD MORE BUTTON ---------- */
+/* ======== LOAD MORE BUTTON ======== */
 .controls {
   text-align: center;
   margin: 20px 0 40px;
@@ -140,21 +139,21 @@ body {
   font-weight: 500;
   border: none;
   border-radius: 4px;
-  background-color: var(--accent);
+  background-color: var(--accent-color);
   color: #fff;
   cursor: pointer;
   transition: background-color 0.2s ease;
 }
 
 .load-more:hover {
-  background-color: #3d5ae8;
+  background-color: var(--accent-hover);
 }
 
 .is-hidden {
   display: none !important;
 }
 
-/* ---------- LOADER ---------- */
+/* ======== LOADER ======== */
 .loader {
   display: flex;
   justify-content: center;
@@ -166,7 +165,7 @@ body {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background-color: var(--accent);
+  background-color: var(--accent-color);
   animation: bounce 1s infinite ease-in-out;
 }
 
