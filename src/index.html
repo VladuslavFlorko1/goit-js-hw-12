@@ -5,30 +5,32 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pixabay Search</title>
-  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="stylesheet" href="./css/styles.css" />
 </head>
 
 <body>
   <header class="header">
-    <form id="search-form" class="search-form" autocomplete="off">
+    <form class="form search-form" id="search-form" autocomplete="off">
       <input type="text" name="search" placeholder="Search images..." required />
       <button type="submit">Search</button>
     </form>
   </header>
 
   <main>
-    <ul id="gallery" class="gallery"></ul>
+    <ul class="gallery" id="gallery"></ul>
 
     <div class="controls">
-      <button id="load-more" class="load-more is-hidden">Load more</button>
+      <button class="load-more is-hidden" id="load-more" type="button">
+        Load more
+      </button>
 
-      <div id="loader" class="loader is-hidden" aria-hidden="true">
+      <span class="loader is-hidden" id="loader" aria-hidden="true">
         <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-      </div>
+      </span>
     </div>
   </main>
 
-  <script type="module" src="/main.js"></script>
+  <script type="module" src="./main.js"></script>
 </body>
 
 </html>
